@@ -3,7 +3,7 @@ node {
 		def scannerHome = tool 'SonarQube Scanner 2.8';
 
 		withSonarQubeEnv('SonarQube Server') {
-			bat "${scannerHome}\\bin\\sonar-scanner"
+			sh "${scannerHome}/bin/sonar-scanner"
 		}
 	}
 }
